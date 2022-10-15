@@ -12,21 +12,26 @@ body{
 }
 /* HEADER y NAV BAR */
 header {
-    background:url(./Media/Banner/1.jpg);
+    display: flex;
+    background: url(./Media/Banner/1.jpg);
     background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 180px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 /* LOGO */
 .img_logo{
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
-    display: flow-root;
     inline-size: 180px;
+    flex-shrink: 1;
 }
 /* NAV BAR */
 .site_nav{
@@ -60,6 +65,7 @@ ul li a{
 /* Todo este codigo que puse aca lo cambio cuando aprenda flexbox, esta es como una solucion pobre a un problema de conocimiento. */
 
 .aling_index{
+    margin-top: -5%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -75,8 +81,11 @@ ul li a{
 }
 .text_box_index{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-shrink: 1;
+    align-items: center;
 }
 .titulo_index {
     font-family: 'Cinzel', serif;
@@ -93,9 +102,13 @@ ul li a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .index_link{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 40px;
     margin-left: 20;
     width: 400px;
     text-align: center;
+    text-transform: capitalize;
     text-decoration: none;
     color: black;
     background-color: #d99771;
@@ -192,9 +205,15 @@ ul li a{
 /* FIN SERVICIOS */
 
 /* UBICACION (PASAR A FLEXBOX PARA LA SEGUNDA ENTREGA)*/
-.ubi_izq{
-    margin: 400px 0px 0px 200px;
-    float: left;
+.ubi_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.ubi_text{
+    margin-top: 250px;
     font-family: 'Cinzel', serif;
     font-size: 40px;
     text-align: center;
@@ -203,16 +222,16 @@ ul li a{
     border-radius: 25px;
     padding: 20px;
 }
-.ubi_izq p{
+.ubi_map{
+    margin-top: 250px;
+    background-color: #D7C8B6;
+    border:#442b0c 3px solid;
+}
+.ubi_ubi p{
     font-size: 25px;
     margin-top: 40px;
 }
-.ubi_dere{
-    float: right;
-    margin: 300px 200px 0px 0px;
-    background-color: #D7C8B6;
-    border:#442b0c 2px solid;
-}
+
 /* FIN UBICACION */
 
 /* CONTACTO */
@@ -279,37 +298,38 @@ footer{
     width: 100%;
     height: 10%;
 }
-.img_logo_bottom{
-    margin: 10px 0px 0px 80px;
-    margin-left: 80px;
-    float: left;
-    inline-size: 120px;
+.footer_flex{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
 }
 .footer_text{
     font-family: 'Cinzel', serif;
     font-size: 20px;
     font-weight: 600;
-    float: left;
-    padding: 35px 40px 40px 40px;
 }
-.footer_right{
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    float: right;
-    padding: 035px;
+.footer_contacto{
+    margin-left: 20;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 8px;
+    background-color:#f3eade;
+    border:#442b0c 2px solid;
 }
-.footer_right_controlled{
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    float: right;
-    padding: 35px;
-    margin-top: -5px;
+.footer_contacto:hover{
+    background-color: white;
+    color: #D7C8B6;
 }
-.fa-brands fa-instagram{
-    float:  right;
-    font-size: 50px;
-}
+.fa-instagram:before {
+    content: "\f16d";
+    font-size: 40px;}
 footer section a{
-    font-size: 30px;
     color: black;
 }
