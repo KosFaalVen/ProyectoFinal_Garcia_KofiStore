@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,600;1,900&family=Oswald:wght@200;300;400&family=Signika+Negative:wght@300;400;700&display=swap');
 *{
     margin: 0;
     padding: 0%;
@@ -31,7 +31,6 @@ header {
     margin-right: auto;
     margin-top: 15px;
     inline-size: 180px;
-    flex-shrink: 1;
 }
 /* NAV BAR */
 .site_nav{
@@ -53,10 +52,12 @@ ul li a{
     font-weight: 500;
     border-radius: 25px;
     padding: 8px;
+    transition:  0.3s;
 }
 .nav_menu:hover{
     background-color: white;
     color: #D7C8B6;
+    scale: 1.2;
 }
 /* TERMINA HEADER Y NAV BAR */
 
@@ -81,57 +82,60 @@ ul li a{
 }
 .text_box_index{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     flex-shrink: 1;
     align-items: center;
+    width: 100%;
 }
+
 .titulo_index {
     font-family: 'Cinzel', serif;
     font-size: 80px;
     text-align: center;
-    padding-bottom: 50px;
 }
 .texto_index{
-    width: 500px;
-    break-inside: auto;
-    padding: 20px;
-    font-size: 25px;
+    width: 900px;
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
     color: rgb(3, 26, 6);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .index_link{
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 40px;
-    margin-left: 20;
+    padding: 10px 20px 10px 20px;
     width: 400px;
-    text-align: center;
-    text-transform: capitalize;
-    text-decoration: none;
     color: black;
     background-color: #d99771;
     border: #442b0c 2px solid;
     border-radius: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px black;
 }
 .index_link:hover{
-    background-color: white;
-    color: #D7C8B6;
+    background-color: #dbb098;
+    scale: 1.2;
+    box-shadow: 10px 10px 8px black;
 }
-
-
 
 /* Todo este codigo que puse aca lo cambio cuando aprenda flexbox, esta es como una solucion pobre a un problema de conocimiento. */
 /* FIN INDEX */
 /* MENU TODO EL MENU SE REACE CON FLEXBOX */
 .h1_menu{
+    font-family: 'Cinzel', serif;
     margin-top: 12%;
     text-align: center;
     font-size: 70px;
     margin-bottom: 40px;
 }
 .h2{
+    font-family: 'Cinzel', serif;
     display: flex;
     font-size: 50px;
     margin-left: 10%;
@@ -154,6 +158,7 @@ ul li a{
     object-fit: cover;
 }
 .text_menu{
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
 }
 
@@ -167,15 +172,20 @@ ul li a{
     text-align: center;
 }
 .alignment{
-    margin-left: 220px;
+    display: flex;
+    justify-content: center;
 }
-.servicios_sin_flex{
-    float: left;
-    margin-top: 10px;
+.servicios_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    flex-wrap: wrap;
     padding: 40px;
 }
 .h_servi{
+    width: fit-content;
+    padding: 5px 15px 5px 15px;
     font-family: 'Cinzel', serif;
     text-decoration: underline;
     margin-bottom: 10px;
@@ -186,15 +196,14 @@ ul li a{
 .img_servi{
     border: #442b0c 2px solid;
     border-radius: 12px;
+    transition: all 0.3s;
+}
+.img_servi:hover{
+    background-color: #0c0c0c;
+    opacity: 0.4;
 }
 .p_servi{
-    width: 400px;
-    word-break: break-word;
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    text-align: center;
-}
-.p_servi_long{
+    padding: 20px;
     width: 400px;
     word-break: break-word;
     font-family: 'Cinzel', serif;
@@ -227,9 +236,10 @@ ul li a{
     background-color: #D7C8B6;
     border:#442b0c 3px solid;
 }
-.ubi_ubi p{
+.ubi_text p{
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /* FIN UBICACION */
@@ -322,10 +332,12 @@ footer{
     padding: 8px;
     background-color:#f3eade;
     border:#442b0c 2px solid;
+    transition: 0.3s;
 }
 .footer_contacto:hover{
     background-color: white;
     color: #D7C8B6;
+    transform: scale(1.1);
 }
 .fa-instagram:before {
     content: "\f16d";
